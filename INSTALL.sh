@@ -8,4 +8,5 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #rm lib.zip
 
 cd $DIR/lib/assimp
-cmake -DCMAKE_CXX_FLAGS="-stdlib=libc++ -fvisibility-inlines-hidden" -DCMAKE_BUILD_TYPE=Release -DASSIMP_BUILD_STATIC_LIB=true
+cmake CMakeLists.txt -DCMAKE_BUILD_TYPE=Release -DASSIMP_BUILD_STATIC_LIB=true
+make
