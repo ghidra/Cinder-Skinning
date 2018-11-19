@@ -1,4 +1,0 @@
-/home/jimmy/projects/cinder/Cinder/blocks/Cinder-Skinning/samples/SeymourDemo/proj/cmake/CMakeFiles/rebuild_cache.dir
-/home/jimmy/projects/cinder/Cinder/blocks/Cinder-Skinning/samples/SeymourDemo/proj/cmake/CMakeFiles/edit_cache.dir
-/home/jimmy/projects/cinder/Cinder/blocks/Cinder-Skinning/samples/SeymourDemo/proj/cmake/CMakeFiles/SeymourDemoApp.dir
-/home/jimmy/projects/cinder/Cinder/blocks/Cinder-Skinning/samples/SeymourDemo/proj/cmake/CMakeFiles/Cinder-Skinning.dir

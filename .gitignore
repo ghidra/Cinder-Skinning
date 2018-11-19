@@ -20,6 +20,13 @@ Debug/
 Release/
 ipch/
 
+# Linux 
+**/cmake/CMakeCache.txt
+**/cmake/CMakeFiles
+**/cmake/Makefile
+**/cmake/cmake_install.cmake
+**/cmake/libCinder-Bullet3D.a
+
 # doxygen generated files
 docs/html
 docs/doxygen/cinder.tag
