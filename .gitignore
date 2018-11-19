@@ -8,7 +8,7 @@ xcuserdata/
 .DS_Store
 
 build/
-lib/
+#lib/
 Eigen/
 
 # Windows cruft
