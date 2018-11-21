@@ -38,7 +38,7 @@ if( NOT TARGET Cinder-Skinning )
 
 	)
 
-	find_library(ASSIMP_LIB libassimp HINTS "${CMAKE_CURRENT_LIST_DIR}/../../lib/assimp/lib")
+	#find_library(ASSIMP_LIB NAMES libassimp HINTS "${CMAKE_CURRENT_LIST_DIR}/../../lib/assimp/lib")
 
   	add_library( Cinder-Skinning ${SKINNING_SOURCES} )
 
@@ -50,8 +50,8 @@ if( NOT TARGET Cinder-Skinning )
 		${CINDER_SKINNING_SOURCE_PATH}/lib/assimp/include
 		${CINDER_PATH}/include
 	)
-  
-  	target_include_directories( Cinder-Skinning PUBLIC "${SKINNING_INCLUDE_DIRS}" )
+
+  	target_include_directories( Cinder-Skinning SYSTEM BEFORE PUBLIC "${SKINNING_INCLUDE_DIRS}" )
 
   	#target_link_libraries(Cinder-Skinning "${ASSIMP_LIB}")
 
@@ -62,6 +62,13 @@ if( NOT TARGET Cinder-Skinning )
 	  		"$ENV{CINDER_PATH}/${CINDER_LIB_DIRECTORY}" )
   	endif()
   
-  	target_link_libraries( Cinder-Skinning PRIVATE cinder ASSIMP_LIB )
-  
+  	#link_directories(${CMAKE_CURRENT_LIST_DIR}/../../lib/assimp/lib)
+
+  	# Your-external "mylib", add GLOBAL if the imported library is located in directories above the current.
+	add_library( libassimp SHARED IMPORTED )
+	# You can define two import-locations: one for debug and one for release.
+	set_target_properties( libassimp PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_LIST_DIR}/../../lib/assimp/lib/libassimp.so )
+
+  	target_link_libraries( Cinder-Skinning PRIVATE cinder libassimp )
+  	
 endif()

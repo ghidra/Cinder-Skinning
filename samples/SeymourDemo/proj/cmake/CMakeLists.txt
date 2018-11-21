@@ -14,7 +14,7 @@ set( SRC_FILES
 
 ci_make_app(
 	SOURCES     ${SRC_FILES}
-	INCLUDES    ${APP_PATH}/include
+	#INCLUDES    ${APP_PATH}/include
 	CINDER_PATH ${CINDER_PATH}
 	BLOCKS		${CINDER_PATH}/blocks/Cinder-Skinning
 )

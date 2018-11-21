@@ -3,7 +3,7 @@
 
 #include "Skeleton.h"
 #include "Renderer.h"
-//#include "Resources.h"
+//#include "Skinning_Resources.h"
 
 #include "cinder/Utilities.h"
 

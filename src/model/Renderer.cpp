@@ -14,7 +14,7 @@
 #include "cinder/Surface.h"
 
 #include "Renderer.h"
-//#include "Resources.h"
+#include "Skinning_Resources.h"
 #include "SkeletalTriMesh.h"
 #include "Skeleton.h"
 #include "Node.h"
